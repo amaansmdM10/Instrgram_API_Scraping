@@ -1,4 +1,4 @@
-# Instrgram_API_Scraping
+# Instragram_API_Scraping
 
 GET Details of users like name, bio , Followers, Following 
 
