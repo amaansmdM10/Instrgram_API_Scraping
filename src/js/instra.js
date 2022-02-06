@@ -67,7 +67,7 @@ fetch(url, {
     <div class="offset-2 col-12">______________________________________________________________________________________________________________________________</div>
     </div>
     ` 
-    if(count<1){
+    if(count==0 && media!=0){
         const f=`
             &nbsp
             &nbsp
@@ -75,6 +75,28 @@ fetch(url, {
             <div style="display: flex; justify-content: center;" class="py-5" >
                   <strong style="font-size: 50px">NO POSTS</strong>
             </div>
+        `
+        document.querySelector(' .new').innerHTML = f;
+    }
+    else if(count>=0 && media==0){
+        const f=`
+        &nbsp
+        &nbsp
+        &nbsp
+        <div style="display: flex; justify-content: center;" class="py-5" >
+              <strong style="font-size: 50px">Account Private</strong>
+        </div>
+        `
+        document.querySelector(' .new').innerHTML = f;
+    }
+    else if(count>=1 && media!=0){
+        const f=`
+        &nbsp
+        &nbsp
+        &nbsp
+        <div style="display: flex; justify-content: center;" class="py-5" >
+              <strong style="font-size: 50px">Under Construction</strong>
+        </div>
         `
         document.querySelector(' .new').innerHTML = f;
     }
